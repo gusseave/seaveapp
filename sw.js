@@ -1,7 +1,7 @@
 // Guarda la app en el teléfono para que abra sin señal. Los datos no pasan por acá:
 // los pedidos al servidor van siempre a la red.
 // Cambiar VERSION en cada publicación para que los teléfonos tomen los archivos nuevos.
-const VERSION = 'seaveapp-v2';
+const VERSION = 'seaveapp-v3';
 const ARCHIVOS = ['./', './index.html', './app.css', './app.js', './calc.js', './config.js',
   './manifest.webmanifest', './assets/logo-seave.png', './assets/icon-192.png', './assets/icon-512.png', './privacidad.html'];
 

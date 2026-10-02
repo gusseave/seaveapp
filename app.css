@@ -66,8 +66,8 @@ button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-
 .estado.completado { background: oklch(91% 0.06 145); color: oklch(32% 0.13 145); }
 .estado.aprobado_supervisor { background: oklch(88% 0.07 145); color: oklch(28% 0.13 145); }
 .cuadrilla { flex-shrink: 0; max-width: 150px; text-align: right; font-size: 11px; font-weight: 800; padding: 4px 9px; border-radius: 8px; background: var(--suave); color: oklch(30% 0.006 90); border: 1px solid oklch(85% 0.008 90); line-height: 1.3; }
-.filtros { display: flex; gap: 8px; padding: 14px 20px 4px; overflow-x: auto; }
-.filtro { flex-shrink: 0; font-size: 13px; font-weight: 700; padding: 8px 15px; border-radius: 20px; white-space: nowrap; background: #fff; color: oklch(35% 0.006 90); border: 1.5px solid oklch(80% 0.008 90); }
+.filtros { display: flex; flex-wrap: wrap; gap: 8px; padding: 14px 20px 4px; }
+.filtro { font-size: 13px; font-weight: 700; padding: 8px 13px; border-radius: 20px; white-space: nowrap; background: #fff; color: oklch(35% 0.006 90); border: 1.5px solid oklch(80% 0.008 90); }
 .filtro.activo { background: var(--verde); color: #fff; border-color: var(--verde); }
 .pill { display: flex; align-items: center; gap: 5px; padding: 5px 9px; border-radius: 20px; font-size: 11px; font-weight: 700; background: oklch(91% 0.06 145); color: oklch(32% 0.13 145); flex-shrink: 0; }
 .pill::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
@@ -193,4 +193,14 @@ textarea.entrada { resize: none; }
   .pestanas, .fab, .barra-atras, .no-imprimir { display: none !important; }
   .seccion { padding: 0; }
   #parte-hoja { border: 0; border-radius: 0; padding: 0; }
+}
+
+/* En pantallas anchas (computadora) la app se muestra como una columna enmarcada. */
+@media (min-width: 520px) {
+  html, body { background: oklch(90% 0.006 90); }
+  #app { box-shadow: 0 0 0 1px var(--linea), 0 8px 40px oklch(20% 0.006 90 / 12%); }
+}
+@media print {
+  html, body { background: #fff !important; }
+  #app { box-shadow: none; }
 }
